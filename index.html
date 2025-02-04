@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Marks Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Enter Your Marks</h2>
+        <div class="space-y-3">
+            <input type="number" id="math" placeholder="Math" class="w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+            <input type="number" id="biology" placeholder="Biology" class="w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+            <input type="number" id="chemistry" placeholder="Chemistry" class="w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-transparent">
+            <input type="number" id="physics" placeholder="Physics" class="w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <input type="number" id="bangla" placeholder="Bangla" class="w-full p-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+        </div>
+        <div class="mt-4 flex gap-3">
+            <button onclick="calculateTotal()" class="flex-1 bg-gradient-to-r from-purple-600 to-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:opacity-90 transition">Total Marks</button>
+            <button onclick="calculateAverage()" class="flex-1 bg-gradient-to-r from-purple-600 to-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:opacity-90 transition">Calculate Average</button>
+        </div>
+        <p id="result" class="mt-4 text-lg font-semibold text-gray-700"></p>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            let math = parseFloat(document.getElementById("math").value) || 0;
+            let biology = parseFloat(document.getElementById("biology").value) || 0;
+            let chemistry = parseFloat(document.getElementById("chemistry").value) || 0;
+            let physics = parseFloat(document.getElementById("physics").value) || 0;
+            let bangla = parseFloat(document.getElementById("bangla").value) || 0;
+
+            let total = math + biology + chemistry + physics + bangla;
+            document.getElementById("result").innerText = "Total Marks: " + total.toFixed(2);
+        }
+
+        function calculateAverage() {
+            let math = parseFloat(document.getElementById("math").value) || 0;
+            let biology = parseFloat(document.getElementById("biology").value) || 0;
+            let chemistry = parseFloat(document.getElementById("chemistry").value) || 0;
+            let physics = parseFloat(document.getElementById("physics").value) || 0;
+            let bangla = parseFloat(document.getElementById("bangla").value) || 0;
+
+            let total = math + biology + chemistry + physics + bangla;
+            let average = total / 5;
+
+            document.getElementById("result").innerText = "Average Marks: " + average.toFixed(2);
+        }
+    </script>
+</body>
+</html>
