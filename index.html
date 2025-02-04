@@ -18,35 +18,10 @@
         </div>
         <div class="mt-4 flex gap-3">
             <button onclick="calculateTotal()" class="flex-1 bg-gradient-to-r from-purple-600 to-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:opacity-90 transition">Total Marks</button>
-            <button onclick="calculateAverage()" class="flex-1 bg-gradient-to-r from-purple-600 to-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:opacity-90 transition">Calculate Average</button>
+            <button onclick="calculateAverage()" class="flex-1 bg-gradient-to-r from-purple-600 to-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:opacity-90 transition">Average Marks</button>
         </div>
         <p id="result" class="mt-4 text-lg font-semibold text-gray-700"></p>
     </div>
-
-    <script>
-        function calculateTotal() {
-            let math = parseFloat(document.getElementById("math").value) || 0;
-            let biology = parseFloat(document.getElementById("biology").value) || 0;
-            let chemistry = parseFloat(document.getElementById("chemistry").value) || 0;
-            let physics = parseFloat(document.getElementById("physics").value) || 0;
-            let bangla = parseFloat(document.getElementById("bangla").value) || 0;
-
-            let total = math + biology + chemistry + physics + bangla;
-            document.getElementById("result").innerText = "Total Marks: " + total.toFixed(2);
-        }
-
-        function calculateAverage() {
-            let math = parseFloat(document.getElementById("math").value) || 0;
-            let biology = parseFloat(document.getElementById("biology").value) || 0;
-            let chemistry = parseFloat(document.getElementById("chemistry").value) || 0;
-            let physics = parseFloat(document.getElementById("physics").value) || 0;
-            let bangla = parseFloat(document.getElementById("bangla").value) || 0;
-
-            let total = math + biology + chemistry + physics + bangla;
-            let average = total / 5;
-
-            document.getElementById("result").innerText = "Average Marks: " + average.toFixed(2);
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
